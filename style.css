@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%); 
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    border-radius: 10px;
+    height: 90vh;
+    background: #fff;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    width: 340px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .10);
+}
+
+.inner-container {
+    padding: 20px;
+}
+
+.hero-img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+h1 {
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+h1 + p, .price {
+    color: var(--desaturated-blue);
+}
+
+.price, .change-plan-link {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.plan-container {
+    background: var(--very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.change-plan-link {
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+.payment-btn {
+    border-radius: 10px;
+    background: var(--bright-blue);
+    color: #fff;
+    width: 100%;
+    padding: 15px 50px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .10);
+    margin: 20px 0;
+}
+
+.payment-btn:hover, .payment-btn:focus {
+    background: var(--dark-blue);
+}
+
+.cancel-btn {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+
+@media (min-width: 1000px) {
+    body {
+       background-image: url(/images/pattern-background-desktop.svg);
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+    }
+    .card {
+        margin: 40px 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card {
+        height: 80vh;
+    }
+}
+
+
